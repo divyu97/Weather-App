@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+body {
+    background-color: rgba(128, 128, 128, 0.4);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+* {
+    font-family: Comfortaa, Arial;
+}
+
+#main-container {
+    width: 100rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6e9eb;
+    border-radius: 10px;
+    padding: 3rem;
+}
+
+#heading {
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+#city {
+   font-size: 1.7rem;
+   border-radius: 8px;
+   border: 2px solid black;
+   width: 50vw; 
+   padding: 0.5rem;
+}
+
+#city:focus {
+    outline: none;
+    border-color: rgb(47, 93, 219);
+}
+
+#search {
+    font-size: 1.5rem;
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(47, 93, 219);
+}
+
+#search:hover {
+    cursor: pointer;
+    background-color: rgb(30, 77, 204);
+}
