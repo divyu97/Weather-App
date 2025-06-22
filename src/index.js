@@ -60,8 +60,7 @@ document.querySelector("#search").addEventListener("click", function() {
             import(`./icons/${data["icon"]}.svg`).then((module) => {
                 document.querySelector("#icon").src = module.default;
             });
-        }).catch((error) => {
-            results.textContent = "";
-            alert(error);
+        }).catch(() => {
+            results.textContent = `No weather data found for '${city}'`;
         });
 });
