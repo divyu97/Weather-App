@@ -23,7 +23,7 @@ body {
     padding: 3rem;
 }
 
-#heading {
+#heading, #res-heading {
     font-weight: bolder;
     font-size: 3rem;
 }
@@ -53,4 +53,49 @@ body {
 #search:hover {
     cursor: pointer;
     background-color: rgb(30, 77, 204);
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+#res-heading {
+    font-size: 2rem;
+}
+
+#data {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    flex-wrap: wrap;
+    font-size: 2.5rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.reading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+#temp, #qnh {
+    justify-content: flex-end;
 }
