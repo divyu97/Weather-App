@@ -18,7 +18,7 @@ async function getData(city) {
     let timer;
     try {
         results.textContent = "Loading";
-        timer = setInterval(loading, 250);
+        timer = setInterval(loading, 300);
         let response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=3B98CBJ37XK6NVTBSR7BKBEBV&unitGroup=metric`, {mode: 'cors'});
         let data = await response.json();
         clearInterval(timer);
