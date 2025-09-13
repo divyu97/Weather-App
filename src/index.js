@@ -7,24 +7,18 @@ function cleanData(data) {
     return {"temp": curr["temp"], "cond": curr["conditions"], "qnh": String(curr["pressure"]).padStart(4, "0"), "icon": curr["icon"]};
 }
 
-function loading() {
-    if (results.textContent.length === 10)
-        results.textContent = "Loading";
-    else
-        results.textContent += ".";
-}
-
 async function getData(city) {
-    let timer;
     try {
-        results.textContent = "Loading";
-        timer = setInterval(loading, 300);
+        results.innerHTML = `
+            <div class="spinner"></div>
+            <div id="loading-text">Loading</div>
+        `;
         let response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=3B98CBJ37XK6NVTBSR7BKBEBV&unitGroup=metric`, {mode: 'cors'});
         let data = await response.json();
-        clearInterval(timer);
+        results.textContent = ``;
         return cleanData(data);
     } catch {
-        clearInterval(timer);
+        results.textContent = ``;
         throw new Error("No data found");
     }
 }
